@@ -2,7 +2,6 @@ import type { RouterConfig } from '@nuxt/schema'
 
 // // https://router.vuejs.org/api/#routeroptions
 export default <RouterConfig>{
-  // blinks with "from" page first screen
   scrollBehavior: (to, _, savedPosition) => {
     if (savedPosition) {
       return savedPosition
@@ -11,7 +10,6 @@ export default <RouterConfig>{
     }
   }
 
-  // // blinks with "to" page second screen (because savedPosition moved to next page)
   // scrollBehavior(to, _from, savedPosition) {
   //   return new Promise((resolve, _reject) => {
   //     setTimeout(() => {
@@ -27,7 +25,7 @@ export default <RouterConfig>{
   //           resolve({ top: 0 })
   //         }
   //       }
-  //     }, 100)
+  //     })
   //   })
   // }
 }
